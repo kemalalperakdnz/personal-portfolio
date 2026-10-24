@@ -33,9 +33,10 @@ html[data-theme="dark"] {
 
 * { box-sizing: border-box; }
 [hidden] { display: none !important; }
-html { scroll-behavior: smooth; }
+html { scroll-behavior: smooth; overflow-x: clip; }
 body {
     margin: 0;
+    overflow-x: clip;
     position: relative;
     background:
         radial-gradient(720px 360px at 0% -8%, rgba(255, 59, 31, 0.16), transparent 58%),
@@ -643,8 +644,12 @@ h2::after {
 .creds li { border-top: 1px solid var(--line); padding: 12px 0; }
 .creds a:hover { color: var(--accent); }
 
-.contact-grid { grid-template-columns: 0.9fr 1.1fr; gap: 36px; align-items: start; }
+.contact-grid { grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr); gap: 36px; align-items: start; }
+.contact-grid > * { min-width: 0; }
 .big-mail {
+    display: block;
+    max-width: 100%;
+    overflow-wrap: break-word;
     font-family: var(--serif);
     font-size: clamp(1.8rem, 3vw, 2.8rem);
     letter-spacing: -0.04em;
@@ -698,7 +703,9 @@ input:focus, textarea:focus, button:focus-visible, a:focus-visible {
     font-family: "JetBrains Mono", ui-monospace, monospace;
     font-size: 0.72rem;
     letter-spacing: 0.02em;
+    overflow: hidden;
 }
+.statusbar > span { min-width: 0; }
 .statusbar .ok { color: var(--green); }
 .statusbar .push { margin-left: auto; color: var(--accent); }
 .gear {
@@ -716,7 +723,7 @@ input:focus, textarea:focus, button:focus-visible, a:focus-visible {
 .footer a { color: var(--ink); }
 
 @media (max-width: 980px) {
-    .hero, .case-body, .story-grid, .contact-grid, .edu { grid-template-columns: 1fr; }
+    .hero, .case-body, .story-grid, .contact-grid, .edu { grid-template-columns: minmax(0, 1fr); }
     .edu { grid-template-columns: 1fr 1fr; }
     .portrait { max-width: 420px; margin-left: 0; }
     .skill-board { position: static; }
@@ -747,6 +754,18 @@ input:focus, textarea:focus, button:focus-visible, a:focus-visible {
     .footer { flex-direction: column; }
     .hide-sm { display: none; }
     .marquee-track { animation-duration: 22s; }
+    h1 { font-size: clamp(2.5rem, 12vw, 3.4rem); }
+    .portrait { margin-left: 0; width: 100%; }
+    .portrait img { box-shadow: 8px 8px 0 var(--accent); }
+    .statusbar { gap: 8px; padding: 0 10px; }
+    .statusbar #sbPos { display: none; }
+    .statusbar .push {
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+    }
+    .case { padding: 20px 16px 24px; }
+    .big-mail { font-size: clamp(1.35rem, 6.2vw, 1.8rem); }
 }
 
 .hero { position: relative; }
@@ -951,6 +970,7 @@ input:focus, textarea:focus, button:focus-visible, a:focus-visible {
     .mosaic { grid-template-columns: 1fr 1fr; }
     .film figure, .film img { width: 220px; height: 132px; }
     .screen-view, .code-run { min-height: 190px; height: auto; }
+    .code-run { white-space: pre-wrap; overflow-wrap: anywhere; }
     .screen-view { height: 190px; }
     .cursor { display: none; }
 }
