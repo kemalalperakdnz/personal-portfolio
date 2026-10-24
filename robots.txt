@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://personal-portfolio-nine-dun.vercel.app/sitemap.xml
