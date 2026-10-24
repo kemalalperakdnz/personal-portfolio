@@ -1,0 +1,1012 @@
+<!DOCTYPE html>
+<html lang="tr" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kemal Alper Akdeniz — Front-end geliştirici</title>
+    <meta name="description" content="Kemal Alper Akdeniz. Kayseri’de Akdeniz Technology’nin yazılımını çıkarıyor. EKİPLEŞ, Servis Pusulası, topluluk siteleri ve görüntü işleme işleri.">
+    <meta name="author" content="Kemal Alper Akdeniz">
+    <meta name="theme-color" content="#f4f6f8">
+    <link rel="canonical" href="https://kemalalperakdeniz.com/">
+    <meta property="og:title" content="Kemal Alper Akdeniz — Front-end geliştirici">
+    <meta property="og:description" content="Yayına çıkan ürünlerin arayüzünü kuran bir geliştirici. EKİPLEŞ, Servis Pusulası ve seçili işler.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kemalalperakdeniz.com/">
+    <meta property="og:image" content="https://kemalalperakdeniz.com/images/kemalalper.jpg">
+    <meta property="og:locale" content="tr_TR">
+    <link rel="icon" href="images/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&family=Syne:wght@600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        try {
+            var savedTheme = localStorage.getItem("theme");
+            var savedLang = localStorage.getItem("lang");
+            if (!savedTheme && window.matchMedia("(prefers-color-scheme: dark)").matches) savedTheme = "dark";
+            document.documentElement.setAttribute("data-theme", savedTheme || "light");
+            if (savedLang === "en" || savedLang === "tr") document.documentElement.lang = savedLang;
+            document.querySelector('meta[name="theme-color"]').setAttribute("content", (savedTheme === "dark") ? "#090b10" : "#f4f6f8");
+        } catch (error) {}
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Kemal Alper Akdeniz",
+        "jobTitle": "Front-end Developer",
+        "worksFor": { "@type": "Organization", "name": "Akdeniz Technology", "url": "https://akdeniztech.com" },
+        "url": "https://kemalalperakdeniz.com/",
+        "email": "mailto:alperkemalakdeniz@gmail.com",
+        "telephone": "+905459667230",
+        "image": "https://kemalalperakdeniz.com/images/kemalalper.jpg",
+        "address": { "@type": "PostalAddress", "addressLocality": "Kayseri", "addressCountry": "TR" },
+        "sameAs": [
+            "https://github.com/kemalalperakdnz",
+            "https://www.linkedin.com/in/kemal-alper-akdeniz-00955718b/",
+            "https://medium.com/@kemalalperakdeniz",
+            "https://www.instagram.com/k.alperakdeniz/"
+        ]
+    }
+    </script>
+</head>
+<body>
+    <a class="skip" href="#icerik"><span class="tr">İçeriğe geç</span><span class="en">Skip to content</span></a>
+    <div class="progress" id="progress" aria-hidden="true"></div>
+    <div class="codefield" aria-hidden="true">
+        <span>const</span><span>await</span><span>return</span><span>=&gt;</span><span>function</span>
+        <span>import</span><span>export</span><span>async</span><span>type</span><span>{ }</span>
+        <span>if</span><span>map</span><span>git</span><span>build</span><span>ship</span>
+        <span>useState</span><span>fetch</span><span>props</span><span>render</span><span>commit</span>
+    </div>
+    <nav class="rail" aria-label="Bölümler">
+        <a href="#hikaye"><b>01</b><span class="tr">Hikâye</span><span class="en">Story</span></a>
+        <a href="#isler"><b>02</b><span class="tr">İşler</span><span class="en">Work</span></a>
+        <a href="#yol"><b>03</b><span class="tr">Yol</span><span class="en">Path</span></a>
+        <a href="#arsiv"><b>04</b><span class="tr">Çalışmalar</span><span class="en">More</span></a>
+        <a href="#belgeler"><b>05</b><span class="tr">Belgeler</span><span class="en">Papers</span></a>
+        <a href="#iletisim"><b>06</b><span class="tr">İletişim</span><span class="en">Contact</span></a>
+    </nav>
+
+    <header class="nav" id="nav">
+        <a class="brand" href="#ust" aria-label="Kemal Alper Akdeniz">
+            <span>KA</span>
+        </a>
+        <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navPanel">
+            <span></span><span></span>
+            <span class="sr-only tr">Menü</span>
+            <span class="sr-only en">Menu</span>
+        </button>
+        <div class="nav-panel" id="navPanel">
+            <nav class="nav-links" aria-label="Sayfa">
+                <a href="#hikaye"><i>01</i><span class="tr">Hikâye</span><span class="en">Story</span></a>
+                <a href="#isler"><i>02</i><span class="tr">İşler</span><span class="en">Work</span></a>
+                <a href="#yol"><i>03</i><span class="tr">Yol</span><span class="en">Path</span></a>
+                <a href="#arsiv"><i>04</i><span class="tr">Çalışmalar</span><span class="en">More</span></a>
+                <a href="#iletisim"><i>05</i><span class="tr">İletişim</span><span class="en">Contact</span></a>
+            </nav>
+            <div class="nav-tools">
+                <button class="tool" id="langBtn" type="button">
+                    <span class="tr">EN</span><span class="en">TR</span>
+                </button>
+                <button class="tool theme" id="themeBtn" type="button">
+                    <span class="tr">Tema</span><span class="en">Theme</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="icerik">
+        <section class="hero" id="ust">
+            <canvas id="net" class="net" aria-hidden="true"></canvas>
+            <div class="cursor" id="cursor" aria-hidden="true"></div>
+            <div class="hero-copy">
+                <p class="kicker"><span class="live"></span><span id="buildLog">npm run dev</span></p>
+                <h1>
+                    <span>Kemal Alper</span>
+                    <em>Akdeniz</em>
+                </h1>
+                <p class="role"><span class="tr">Front-end geliştirici</span><span class="en">Front-end developer</span></p>
+                <p class="lede">
+                    <span class="tr">Kayseri’deyim. Akdeniz Technology benim şirketim; yazılımı orada çıkarıyorum. EKİPLEŞ, Servis Pusulası ve Fatih Bulut’un sitesi bu masadan geçti. Arayüzü süs diye görmüyorum. İnsanın işini bitirdiği ekranı kuruyorum.</span>
+                    <span class="en">I live in Kayseri. Akdeniz Technology is my company, and I build the software there. EKİPLEŞ, Servis Pusulası and Fatih Bulut’s site came off this desk. I don’t treat the interface as decoration. I build the screen where someone finishes a job.</span>
+                </p>
+                <div class="hero-actions">
+                    <a class="btn fill" href="#hikaye"><span class="tr">Hikâyem</span><span class="en">My story</span></a>
+                    <a class="btn line" href="images/Kemal-Alper-Akdeniz-CV.pdf" download>
+                        <span class="tr">CV’yi indir</span><span class="en">Download CV</span>
+                    </a>
+                </div>
+                <ul class="hero-facts">
+                    <li><strong>Kayseri</strong><span class="tr">yaşıyor, Mersin’de okudu</span><span class="en">based here, studied in Mersin</span></li>
+                    <li><strong data-count="22">22</strong><span class="tr">açık GitHub deposu</span><span class="en">public GitHub repos</span></li>
+                    <li><strong>2020</strong><span class="tr">yılından beri GitHub’da</span><span class="en">on GitHub since</span></li>
+                </ul>
+                <div class="term" id="term">
+                    <div class="term-bar"><span></span><span></span><span></span> ~/akdeniz — zsh</div>
+                    <pre id="termOut" aria-hidden="true"></pre>
+                </div>
+            </div>
+            <figure class="portrait">
+                <img src="images/kemalalper.jpg" alt="Kemal Alper Akdeniz" width="640" height="800">
+                <figcaption>
+                    <span class="tr">Akdeniz Technology</span>
+                    <span class="en">Akdeniz Technology</span>
+                    <small><span class="tr">Yazılım · Kayseri</span><span class="en">Software · Kayseri</span></small>
+                </figcaption>
+            </figure>
+        </section>
+
+        <div class="marquee" aria-hidden="true">
+            <div class="marquee-track">
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Python</span><span>PyTorch</span><span>SQL</span><span>UI / UX</span><span>Arduino</span><span>ESP32</span><span>Git</span><span>Photoshop</span>
+                <span>HTML</span><span>CSS</span><span>JavaScript</span><span>React</span><span>Python</span><span>PyTorch</span><span>SQL</span><span>UI / UX</span><span>Arduino</span><span>ESP32</span><span>Git</span><span>Photoshop</span>
+            </div>
+        </div>
+        <div class="marquee marquee-back" aria-hidden="true">
+            <div class="marquee-track">
+                <span>const ship = true</span><span>await build()</span><span>return interface</span><span>git commit</span><span>npm run dev</span><span>type Screen</span>
+                <span>const ship = true</span><span>await build()</span><span>return interface</span><span>git commit</span><span>npm run dev</span><span>type Screen</span>
+            </div>
+        </div>
+
+        <section class="section story" id="hikaye">
+            <div class="section-head">
+                <p class="index">01</p>
+                <div>
+                    <h2><span class="tr">Hikâye</span><span class="en">Story</span></h2>
+                    <p class="file">src/hikaye.tsx</p>
+                </div>
+            </div>
+            <div class="story-grid">
+                <div class="prose">
+                    <p class="tr">Kayseri’de yaşıyorum. Mersin Üniversitesi’nde Bilişim Sistemleri ve Teknolojileri okudum. Anadolu Üniversitesi’nde Bilgisayar Programcılığı ön lisansını bitirdim. İki okulu da 2026’da tamamladım. Aynı yıl yapay zeka destekli programlama eğitimine devam etmekteyim.</p>
+                    <p class="en">I live in Kayseri. I studied Information Systems and Technologies at Mersin University. I finished an associate degree in Computer Programming at Anadolu University. I completed both in 2026. This year I am continuing a course in AI-assisted programming.</p>
+                    <p class="tr">Akdeniz Technology benim şirketim. Yazılımı orada, kendi masamda çıkarmaktayım. EKİPLEŞ’i, Servis Pusulası’nı ve Fatih Bulut’un resmi sitesini bu çatı altında yaptım. Arayüzü süs diye görmedim. İnsanın işini bitirdiği ekranı kurdum ve kurmaktayım.</p>
+                    <p class="en">Akdeniz Technology is my company. I am building the software there, at my own desk. I made EKİPLEŞ, Servis Pusulası and Fatih Bulut’s official site under that roof. I never treated the interface as decoration. I built the screen where a person finishes a job, and I am still building it.</p>
+                    <p class="tr">Kodluyoruz’da hem öğrenci oldum hem gönüllülük ettim. Hi-Kod front-end atölyesinde insan hakları sitesini ekip arkadaşlarımla bitirdik. Eğitmenimiz Sena Durmuş’tu. Yapay zeka atölyesine de katıldım. Deneyap’ta jüri koltuğuna oturdum ve gençlerin getirdiği işleri değerlendirdim.</p>
+                    <p class="en">At Kodluyoruz I was a student and I also volunteered. In the Hi-Kod front-end workshop we finished the human-rights site with my teammates. Our instructor was Sena Durmuş. I joined the artificial-intelligence workshop as well. I sat on the Deneyap jury and reviewed the work young people brought in.</p>
+                    <p class="tr">TEKNOFEST’te 2023’te İstanbul’da, 2024’te Antalya’da yarışmacı olarak yer aldım. 2026’da festivalde VIP gönüllüsü olarak görev aldım. Mersin Teknopark’taki MIOTE’da, 22 Haziran ile 17 Ağustos 2026 arasında, elektrikli ekipmanlarda arıza ve anomali tespiti yapan ekipte staj yaptım. Kasım 2025’te İŞKUR Gençlik Programı kapsamında Mersin Üniversitesi’nde görev aldım.</p>
+                    <p class="en">I competed at TEKNOFEST in Istanbul in 2023 and in Antalya in 2024. In 2026 I served as a VIP volunteer at the festival. Between 22 June and 17 August 2026 I interned at MIOTE in Mersin Technopark, with a team that detects faults and anomalies in electrical equipment. In November 2025 I took part in the İŞKUR Youth Program at Mersin University.</p>
+                    <p class="tr">Bilişim Portal’ı açtım ve bir süre yayında tuttum. Sözlüğü, rehberleri ve yazıları aynı çatıda topladım. Medium’da da yazmaktayım. Android’i, iOS’u ve teknik terimleri günlük dille anlattım. İngilizcem orta düzeyde. Yazılarımı Türkçe kuruyorum. Arayüzü ise iki dilde de okunur tutuyorum.</p>
+                    <p class="en">I opened Bilişim Portal and kept it live for a while. I gathered the dictionary, the guides and the essays under one roof. I am also writing on Medium. I explained Android, iOS and the technical terms in everyday language. My English is intermediate. I write in Turkish. I keep the interface readable in both languages.</p>
+                    <p class="tr">Webin ve veritabanının yanında görüntüyle de çalıştım. Göğüs röntgeninden zatürre ayıran bir model eğittim. Kan yaymasında alyuvarı, akyuvarı ve trombositi sayan bir model kurdum. Kameranın önündeki işaret dilini okuyan bir iş yaptım. Taqkey adında, NFC ile not taşıyan bir anahtarlık yaptım ve yanına yolunu hatırlayan bir tabanlık ekledim. İHA-1 belgesini aldım. Boş zamanımda logo ve afiş çiziyorum. Sinema izliyorum, kitap okuyorum, müzik dinliyorum ve spor yapıyorum.</p>
+                    <p class="en">Beside the web and databases I also worked with images. I trained a model that tells pneumonia from a chest X-ray. I built a model that counts red cells, white cells and platelets in a blood smear. I made a piece that reads sign language in front of a camera. I made a key fob called Taqkey that carries a note by NFC, and I added an insole that remembers the path. I received the IHA-1 certificate. In my spare time I draw logos and posters. I watch films, read books, listen to music and play sport.</p>
+                </div>
+                <div class="skill-board">
+                    <article>
+                        <h3><span class="tr">Ön yüz</span><span class="en">Front end</span></h3>
+                        <p>HTML, CSS, JavaScript, React, Bootstrap, <span class="tr">duyarlı arayüz, UI/UX</span><span class="en">responsive UI, UI/UX</span></p>
+                    </article>
+                    <article>
+                        <h3><span class="tr">Program ve veri</span><span class="en">Code and data</span></h3>
+                        <p>Python, C#, SQL, Git</p>
+                    </article>
+                    <article>
+                        <h3><span class="tr">Zekâ ve donanım</span><span class="en">Intelligence and hardware</span></h3>
+                        <p>PyTorch, CNN, Arduino, ESP32, ESP8266</p>
+                    </article>
+                    <article>
+                        <h3><span class="tr">Eli</span><span class="en">Hands</span></h3>
+                        <p>Photoshop, <span class="tr">logo, afiş, proje anlatımı</span><span class="en">logos, posters, project storytelling</span></p>
+                    </article>
+                </div>
+            </div>
+
+            <div class="edu">
+                <article>
+                    <span>2022 — 2026</span>
+                    <h3><span class="tr">Mersin Üniversitesi</span><span class="en">Mersin University</span></h3>
+                    <p><span class="tr">Bilişim Sistemleri ve Teknolojileri</span><span class="en">Information Systems and Technologies</span></p>
+                </article>
+                <article>
+                    <span>2024 — 2026</span>
+                    <h3><span class="tr">Anadolu Üniversitesi</span><span class="en">Anadolu University</span></h3>
+                    <p><span class="tr">Bilgisayar Programcılığı, ön lisans</span><span class="en">Computer Programming, associate degree</span></p>
+                </article>
+                <article>
+                    <span>2026</span>
+                    <h3><span class="tr">Yapay zeka destekli programlama</span><span class="en">AI-assisted programming</span></h3>
+                    <p><span class="tr">Devam ediyor</span><span class="en">In progress</span></p>
+                </article>
+                <article>
+                    <span>2017 — 2021</span>
+                    <h3><span class="tr">Hacı Ahmet Arısoy Anadolu Lisesi</span><span class="en">Hacı Ahmet Arısoy Anatolian High School</span></h3>
+                    <p><span class="tr">Sayısal</span><span class="en">Science track</span></p>
+                </article>
+            </div>
+        </section>
+
+        <section class="section" id="isler">
+            <div class="section-head">
+                <p class="index">02</p>
+                <div>
+                    <h2><span class="tr">Sevdiğim işler</span><span class="en">Work I care about</span></h2>
+                    <p class="file">src/isler.tsx</p>
+                </div>
+            </div>
+
+            <div class="film" aria-hidden="true">
+                <div class="film-track">
+                    <figure><img src="images/shots/ekiples.jpg" alt="EKİPLEŞ ana ekranı"><figcaption>EKİPLEŞ</figcaption></figure>
+                    <figure><img src="images/shots/servis.jpg" alt="Servis Pusulası paneli"><figcaption>Servis Pusulası</figcaption></figure>
+                    <figure><img src="images/shots/fatih.jpg" alt="Fatih Bulut resmi sitesi"><figcaption>Fatih Bulut</figcaption></figure>
+                    <figure><img src="images/shots/miras.jpg" alt="Ebedi Miras anma sitesi"><figcaption>Ebedi Miras</figcaption></figure>
+                    <figure><img src="images/shots/anestezi.jpg" alt="Mersin Anestezi Sempozyumu"><figcaption>Mersin Anestezi</figcaption></figure>
+                    <figure><img src="images/shots/wikirota.jpg" alt="WikiRota"><figcaption>WikiRota</figcaption></figure>
+                    <figure><img src="images/shots/haklar.jpg" alt="İnsan hakları projesi"><figcaption>İnsan Hakları</figcaption></figure>
+                    <figure><img src="images/shots/ingilizce.jpg" alt="İngilizce pratik"><figcaption>İngilizce</figcaption></figure>
+                    <figure><img src="images/shots/ekiples.jpg" alt=""><figcaption>EKİPLEŞ</figcaption></figure>
+                    <figure><img src="images/shots/servis.jpg" alt=""><figcaption>Servis Pusulası</figcaption></figure>
+                    <figure><img src="images/shots/fatih.jpg" alt=""><figcaption>Fatih Bulut</figcaption></figure>
+                    <figure><img src="images/shots/miras.jpg" alt=""><figcaption>Ebedi Miras</figcaption></figure>
+                    <figure><img src="images/shots/anestezi.jpg" alt=""><figcaption>Mersin Anestezi</figcaption></figure>
+                    <figure><img src="images/shots/wikirota.jpg" alt=""><figcaption>WikiRota</figcaption></figure>
+                    <figure><img src="images/shots/haklar.jpg" alt=""><figcaption>İnsan Hakları</figcaption></figure>
+                    <figure><img src="images/shots/ingilizce.jpg" alt=""><figcaption>İngilizce</figcaption></figure>
+                </div>
+            </div>
+
+            <div class="cases">
+                <article class="case" data-cat="urun">
+                    <div class="case-top">
+                        <span>2026</span>
+                    </div>
+                    <div class="case-body">
+                        <div>
+                            <h3>EKİPLEŞ</h3>
+                            <div class="tr">
+                                <p>Doğru insanı kaydırarak buluyorsun. Davet kabul edilmeden oda açılmıyor. Kabul edilince sohbet, kanban ve pomodoro aynı masada.</p>
+                                <p>Bir iş bitmeden diğeri başlamıyor. Kaydırma, oda ve bu kilidi 2026’da, Akdeniz Technology altında, baştan sona ben kurdum.</p>
+                            </div>
+                            <div class="en">
+                                <p>You find the right person with a swipe. The room stays closed until the invite is accepted. Then chat, a board and a pomodoro share the same table.</p>
+                                <p>The next job waits until this one is done. I built the swipe, the room and that lock in 2026, under Akdeniz Technology, from end to end.</p>
+                            </div>
+                            <div class="case-links">
+                                <a href="https://ekiples.com/" target="_blank" rel="noopener noreferrer"><span class="tr">Siteyi aç</span><span class="en">Open site</span></a>
+                            </div>
+                        </div>
+                        <div class="screen">
+                            <div class="screen-bar"><i></i><i></i><i></i><span>ekiples.com</span></div>
+                            <div class="screen-view">
+                                <img src="images/shots/ekiples.jpg" alt="EKİPLEŞ: kaydır, davet et, ekip kur">
+                                <div class="playhead"></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="case" data-cat="urun">
+                    <div class="case-top">
+                        <span>2026</span>
+                    </div>
+                    <div class="case-body">
+                        <div>
+                            <h3><span class="tr">Servis Pusulası</span><span class="en">Servis Pusulası</span></h3>
+                            <div class="tr">
+                                <p>Servisteki dağınık defteri tek ekrana topladım. Plaka, ruhsat, hatırlatma ve sesli not aynı kartın içinde kalıyor.</p>
+                                <p>Usta telefondan da açabiliyor. Akdeniz Technology olarak aylarca bunun üzerinde durdum ve yayına aldım.</p>
+                            </div>
+                            <div class="en">
+                                <p>I pulled the workshop notebook onto one screen. The plate, the registration, the reminder and the voice note stay on the same card.</p>
+                                <p>The mechanic can open it from a phone. I stayed with this for months at Akdeniz Technology, then put it live.</p>
+                            </div>
+                            <div class="case-links">
+                                <a href="https://servispusulasi.com" target="_blank" rel="noopener noreferrer"><span class="tr">Siteyi aç</span><span class="en">Open site</span></a>
+                            </div>
+                        </div>
+                        <div class="screen">
+                            <div class="screen-bar"><i></i><i></i><i></i><span>servispusulasi.com</span></div>
+                            <div class="screen-view">
+                                <img src="images/shots/servis.jpg" alt="Servis Pusulası oto servis paneli">
+                                <div class="playhead"></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="case" data-cat="web">
+                    <div class="case-top">
+                        <span>2026</span>
+                    </div>
+                    <div class="case-body">
+                        <div>
+                            <h3>Fatih Bulut</h3>
+                            <div class="tr">
+                                <p>Fatih Bulut’un resmi sitesini kurdum. Şarkılar, hikâye ve konser talebi ayrı kapılara dağılmıyor; aynı sakin sayfada duruyor.</p>
+                                <p>Sanatçının dijital yüzünü Akdeniz Technology çatısında, baştan sona ben çizdim.</p>
+                            </div>
+                            <div class="en">
+                                <p>I built Fatih Bulut’s official site. The songs, the story and the concert request do not scatter into separate doors. They share one quiet page.</p>
+                                <p>I drew the artist’s digital face from start to finish, under Akdeniz Technology.</p>
+                            </div>
+                            <div class="case-links">
+                                <a href="https://www.fatihbulutofficial.com/" target="_blank" rel="noopener noreferrer"><span class="tr">Siteyi aç</span><span class="en">Open site</span></a>
+                            </div>
+                        </div>
+                        <div class="screen">
+                            <div class="screen-bar"><i></i><i></i><i></i><span>fatihbulutofficial.com</span></div>
+                            <div class="screen-view">
+                                <img src="images/shots/fatih.jpg" alt="Fatih Bulut resmi web sitesi">
+                                <div class="playhead"></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="case" data-cat="web">
+                    <div class="case-top">
+                        <span>2026</span>
+                    </div>
+                    <div class="case-body">
+                        <div>
+                            <h3><span class="tr">Ebedi Miras</span><span class="en">Ebedi Miras</span></h3>
+                            <div class="tr">
+                                <p>Atatürk’ün hayatını ve bıraktığını bir anma sayfasına taşıdım. Kronoloji duruyor. 10 Kasım’da saygı duruşu var, mum yakılabiliyor, Anıtkabir turu da sayfanın içinde.</p>
+                                <p>Bilgiyi duvara asmak yetmedi. Ziyaret eden insanın orada biraz kalmasını istedim.</p>
+                            </div>
+                            <div class="en">
+                                <p>I carried Atatürk’s life and what he left behind into a memorial page. The chronology is there. On 10 November there is a silence, a candle can be lit, and the Anıtkabir tour lives inside the page.</p>
+                                <p>Pinning facts to a wall was not enough. I wanted the person who arrives to stay a while.</p>
+                            </div>
+                            <div class="case-links">
+                                <a href="https://mustafa-kemal-ataturk-one.vercel.app" target="_blank" rel="noopener noreferrer"><span class="tr">Siteyi aç</span><span class="en">Open site</span></a>
+                                <a href="https://github.com/kemalalperakdnz/mustafa-kemal-ataturk" target="_blank" rel="noopener noreferrer">GitHub</a>
+                            </div>
+                        </div>
+                        <div class="screen">
+                            <div class="screen-bar"><i></i><i></i><i></i><span>ebedi miras</span></div>
+                            <div class="screen-view">
+                                <img src="images/shots/miras.jpg" alt="Mustafa Kemal Atatürk dijital arşivi">
+                                <div class="playhead"></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="case" data-cat="web">
+                    <div class="case-top">
+                        <span>2025</span>
+                    </div>
+                    <div class="case-body">
+                        <div>
+                            <h3><span class="tr">Mersin Anestezi</span><span class="en">Mersin Anesthesia</span></h3>
+                            <div class="tr">
+                                <p>Sempozyumun sitesini Ömer Faruk Yalçınkaya ile kurduk. Program, konuşmacılar ve kayıt ayrı yerlere kaçmasın diye tek akışta duruyor.</p>
+                                <p>Hocamız Hüseyin Yanık yol gösterdi. İnsan gelip gününü kaybetmeden salonu, saati ve kaydı görebilsin istedik.</p>
+                            </div>
+                            <div class="en">
+                                <p>Ömer Faruk Yalçınkaya and I built the symposium site. The programme, the speakers and registration stay in one flow so they do not slip into separate places.</p>
+                                <p>Our lecturer Hüseyin Yanık guided us. We wanted a person to see the hall, the hour and the registration without losing the day.</p>
+                            </div>
+                            <div class="case-links">
+                                <a href="https://mersinanestezi.com" target="_blank" rel="noopener noreferrer"><span class="tr">Siteyi aç</span><span class="en">Open site</span></a>
+                            </div>
+                        </div>
+                        <div class="screen">
+                            <div class="screen-bar"><i></i><i></i><i></i><span>mersinanestezi.com</span></div>
+                            <div class="screen-view">
+                                <img src="images/shots/anestezi.jpg" alt="Mersin Anestezi Sempozyumu sitesi">
+                                <div class="playhead"></div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="case" data-cat="web">
+                    <div class="case-top">
+                        <span>2025</span>
+                    </div>
+                    <div class="case-body">
+                        <div>
+                            <h3><span class="tr">Bilişim Portal</span><span class="en">Bilişim Portal</span></h3>
+                            <div class="tr">
+                                <p>Teknolojiyi sade anlatmak için açtığım yer. Harf harf bir bilişim sözlüğü, yeni başlayan için rehber ve kendi yazdığım yazılar aynı çatıda.</p>
+                                <p>Site bir süre yayındaydı. Aynı dili Medium’da da sürdürdüm: Android, iOS ve terimler, günlük cümleyle.</p>
+                            </div>
+                            <div class="en">
+                                <p>A place I opened so technology could be told plainly. A dictionary, letter by letter, guides for someone just starting, and essays I wrote myself, under one roof.</p>
+                                <p>The site was live for a while. I kept the same voice on Medium: Android, iOS and the terms, in everyday sentences.</p>
+                            </div>
+                            <div class="case-links">
+                                <a href="https://bilisimportal.com/" target="_blank" rel="noopener noreferrer"><span class="tr">Siteyi aç</span><span class="en">Open site</span></a>
+                                <a href="https://medium.com/@kemalalperakdeniz" target="_blank" rel="noopener noreferrer">Medium</a>
+                            </div>
+                        </div>
+                        <div class="screen screen-code">
+                            <div class="screen-bar"><i></i><i></i><i></i><span>bilisimportal.com</span></div>
+                            <pre class="code-run"><code><span class="c">// bilişim sözlüğü</span>
+<span class="k">type</span> <span class="t">Terim</span> = { ad: <span class="t">string</span>; tanim: <span class="t">string</span> }
+
+<span class="k">const</span> cekirdek: <span class="t">Terim</span> = {
+  ad: <span class="s">"çekirdek"</span>,
+  tanim: <span class="s">"Donanımın üstündeki ilk katman."</span>
+}
+
+<span class="fn">yayinla</span>(cekirdek)</code></pre>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="section band" id="yol">
+            <div class="section-head">
+                <p class="index">03</p>
+                <div>
+                    <h2><span class="tr">Yol</span><span class="en">Path</span></h2>
+                    <p class="file">src/yol.ts</p>
+                </div>
+            </div>
+            <ol class="path">
+                <li>
+                    <time>2026</time>
+                    <div>
+                        <h3>Akdeniz Technology</h3>
+                        <p class="meta"><span class="tr">Şirketim · yazılım</span><span class="en">My company · software</span></p>
+                        <p class="tr">Kayseri’den web ve yazılım çıkaran şirketim. Fikir masaya geliyor, ekran buradan çıkıyor. EKİPLEŞ, Servis Pusulası ve sanatçı siteleri bu çatının altından geçti. Ben de o masanın yazılım tarafındayım.</p>
+                        <p class="en">My company, shipping web and software from Kayseri. An idea lands on the table and a screen leaves from here. EKİPLEŞ, Servis Pusulası and the artist sites came out from under this roof. I sit on the software side of that table.</p>
+                    </div>
+                </li>
+                <li>
+                    <time>2026</time>
+                    <div>
+                        <h3><span class="tr">Atatürkçü Düşünce Topluluğu</span><span class="en">Atatürkist Thought Society</span></h3>
+                        <p class="meta">Mersin Üniversitesi</p>
+                        <p class="tr">Topluluğun sitesini bu yıl kurduk. Akıl, bilim ve çağdaşlık çizgisi, galeri, vefa sayfası ve günün sözü adt.mersin.edu.tr adresinde duruyor.</p>
+                        <p class="en">We built the society’s site this year. The line of reason, science and modernity, the gallery, the remembrance page and the quote of the day live at adt.mersin.edu.tr.</p>
+                    </div>
+                </li>
+                <li>
+                    <time>2026</time>
+                    <div>
+                        <h3>İHA-1</h3>
+                        <p class="meta"><span class="tr">İnsansız hava aracı</span><span class="en">Unmanned aircraft</span></p>
+                        <p class="tr">İHA-1 belgesini aldım. Ekranın yanında, havada da bir yetkim olsun istedim.</p>
+                        <p class="en">I hold the IHA-1 certificate. I wanted a licence in the air, beside the screen.</p>
+                    </div>
+                </li>
+                <li>
+                    <time><span class="tr">Gönüllü</span><span class="en">Volunteer</span></time>
+                    <div>
+                        <h3>Kodluyoruz</h3>
+                        <p class="meta">Hi-Kod</p>
+                        <p class="tr">Atölyede öğrenci olarak da durdum, gönüllü olarak da. Hi-Kod’da insan hakları sitesini ekiple çıkardık. Eğitmenimiz Sena Durmuş’tu. Yapay zeka atölyesinden de geçtim.</p>
+                        <p class="en">I was a student in the workshop, and a volunteer too. In Hi-Kod we shipped the human-rights site as a team. Our instructor was Sena Durmuş. I also went through the artificial-intelligence workshop.</p>
+                    </div>
+                </li>
+                <li>
+                    <time><span class="tr">Jüri</span><span class="en">Jury</span></time>
+                    <div>
+                        <h3>Deneyap</h3>
+                        <p class="meta"><span class="tr">Değerlendirme</span><span class="en">Review</span></p>
+                        <p class="tr">Deneyap’ta jüri koltuğuna oturdum. Gençlerin getirdiği işi dinledim, baktım, değerlendirdim.</p>
+                        <p class="en">I sat on the Deneyap jury. I listened to the work young people brought, looked at it, and judged it.</p>
+                    </div>
+                </li>
+                <li>
+                    <time>2026</time>
+                    <div>
+                        <h3>EKİPLEŞ</h3>
+                        <p class="meta"><span class="tr">Ürün ve arayüz</span><span class="en">Product and interface</span></p>
+                        <p class="tr">Kaydırma, oda ve tek iş kuralını baştan sona ben kurdum.</p>
+                        <p class="en">I built the swipe, the room and the one-job rule from end to end.</p>
+                    </div>
+                </li>
+                <li>
+                    <time>2026</time>
+                    <div>
+                        <h3>MIOTE · <span class="tr">Mersin Teknopark</span><span class="en">Mersin Technopark</span></h3>
+                        <p class="meta"><span class="tr">Stajyer · 22 Haziran – 17 Ağustos</span><span class="en">Intern · 22 June – 17 August</span></p>
+                        <p class="tr">Elektrikli ekipmanlarda arıza ve anomali tespiti üzerine çalışan ekipte staj yaptım.</p>
+                        <p class="en">Internship with a team that detects faults and anomalies in electrical equipment.</p>
+                    </div>
+                </li>
+                <li>
+                    <time>2026</time>
+                    <div>
+                        <h3>TEKNOFEST</h3>
+                        <p class="meta"><span class="tr">VIP gönüllü</span><span class="en">VIP volunteer</span></p>
+                        <p class="tr">2026 festivalinde VIP gönüllüsü olarak görev aldım. 2023 ve 2024’te ise yarışmacıydım.</p>
+                        <p class="en">VIP volunteer at the 2026 festival. In 2023 and 2024 I was on the competing side.</p>
+                    </div>
+                </li>
+                <li>
+                    <time>2025</time>
+                    <div>
+                        <h3><span class="tr">İŞKUR Gençlik Programı</span><span class="en">İŞKUR Youth Program</span></h3>
+                        <p class="meta"><span class="tr">Mersin Üniversitesi · Kasım 2025</span><span class="en">Mersin University · November 2025</span></p>
+                        <p class="tr">İŞKUR Gençlik Programı kapsamında Mersin Üniversitesi’nde görev aldım.</p>
+                        <p class="en">I took part in the İŞKUR Youth Program at Mersin University.</p>
+                    </div>
+                </li>
+                <li>
+                    <time>2024</time>
+                    <div>
+                        <h3>TEKNOFEST · Antalya</h3>
+                        <p class="meta">Technolast Team · <span class="tr">yarışmacı</span><span class="en">competitor</span></p>
+                        <p class="tr">Akıllı Ulaşım, İnsanlık Yararına Teknolojiler (afet yönetimi) ve Tarım Teknolojileri kategorilerinde takım üyesiydim.</p>
+                        <p class="en">Team member in Smart Transportation, Technology for Humanity (disaster management), and Agricultural Technologies.</p>
+                    </div>
+                </li>
+                <li>
+                    <time>2023</time>
+                    <div>
+                        <h3>TEKNOFEST · İstanbul</h3>
+                        <p class="meta"><span class="tr">Yarışmacı · sağlık ve ilkyardım</span><span class="en">Competitor · health and first aid</span></p>
+                        <p class="tr">İnsanlık Yararına Teknolojiler kapsamında sağlık ve ilkyardım alanında proje geliştirdik.</p>
+                        <p class="en">We built a project in health and first aid under Technology for Humanity.</p>
+                    </div>
+                </li>
+            </ol>
+        </section>
+
+        <section class="section" id="arsiv">
+            <div class="section-head">
+                <p class="index">04</p>
+                <div>
+                    <h2><span class="tr">Çalışmalar</span><span class="en">More</span></h2>
+                    <p class="file">src/calismalar.ts</p>
+                </div>
+            </div>
+            <div class="filters" role="tablist">
+                <button type="button" class="on" data-filter="all"><span class="tr">Tümü</span><span class="en">All</span></button>
+                <button type="button" data-filter="web">Web</button>
+                <button type="button" data-filter="ai"><span class="tr">Zekâ</span><span class="en">AI</span></button>
+                <button type="button" data-filter="iot"><span class="tr">Donanım</span><span class="en">Hardware</span></button>
+            </div>
+            <div class="mosaic">
+                <a href="https://wikirota.vercel.app" target="_blank" rel="noopener noreferrer">
+                    <img src="images/shots/wikirota.jpg" alt="WikiRota oyunu">
+                    <span>WikiRota</span>
+                </a>
+                <a href="https://goldbees-insanhaklar.vercel.app/" target="_blank" rel="noopener noreferrer">
+                    <img src="images/shots/haklar.jpg" alt="İnsan hakları sitesi">
+                    <span class="tr">İnsan hakları</span><span class="en">Human rights</span>
+                </a>
+                <a href="https://ingilizce-pratik.vercel.app" target="_blank" rel="noopener noreferrer">
+                    <img src="images/shots/ingilizce.jpg" alt="İngilizce pratik paneli">
+                    <span class="tr">İngilizce pratik</span><span class="en">English practice</span>
+                </a>
+                <a href="https://github.com/kemalalperakdnz/small_games" target="_blank" rel="noopener noreferrer">
+                    <img src="images/oyun.png" alt="Küçük oyunlar">
+                    <span class="tr">Küçük oyunlar</span><span class="en">Small games</span>
+                </a>
+                <a href="#yol">
+                    <img src="images/teknofest.jpg" alt="TEKNOFEST">
+                    <span>TEKNOFEST</span>
+                </a>
+            </div>
+            <div class="archive" id="archive">
+                <article data-cat="web">
+                    <div>
+                        <h3><span class="tr">Atatürkçü Düşünce Topluluğu</span><span class="en">Atatürkist Thought Society</span></h3>
+                        <div class="tr">
+                            <p>Mersin Üniversitesi Atatürkçü Düşünce Topluluğu’nun sitesini bu yıl kurduk. Kapıda akıl, bilim ve çağdaşlık duruyor. İçeride topluluğu tanıtan sayfa, galeri, vefa sayfası ve her gün değişen bir Atatürk sözü var.</p>
+                            <p>Üniversitenin kendi adresinde yayında: gelen insan kaybolmadan topluluğu, görselleri ve sözü aynı yerde bulsun istedim.</p>
+                        </div>
+                        <div class="en">
+                            <p>We built the site of Mersin University’s Atatürkist Thought Society this year. Reason, science and modernity stand at the door. Inside there is a page that introduces the society, a gallery, a remembrance page and an Atatürk quote that changes each day.</p>
+                            <p>It is live on the university’s own address. I wanted a visitor to find the society, the pictures and the quote without getting lost.</p>
+                        </div>
+                    </div>
+                    <div class="mini-links">
+                        <a href="https://adt.mersin.edu.tr/" target="_blank" rel="noopener noreferrer"><span class="tr">Canlı</span><span class="en">Live</span></a>
+                    </div>
+                </article>
+                <article data-cat="web">
+                    <div>
+                        <h3><span class="tr">Masa sipariş paneli</span><span class="en">Table order panel</span></h3>
+                        <div class="tr">
+                            <p>İşletmenin siparişi kâğıtta kaybolmasın diye kurduğum panel. Kasa, yönetici ve garson aynı sisteme giriyor; her biri kendi ekranını görüyor.</p>
+                            <p>Masa doluyor, sipariş düşüyor, telefondan da açılıyor. İnternet üzerinden çalışıyor, aynı Wi-Fi şart değil.</p>
+                        </div>
+                        <div class="en">
+                            <p>A panel I built so a business’s orders would not get lost on paper. The till, the manager and the waiter sign into the same system, and each one sees their own screen.</p>
+                            <p>A table fills, an order lands, and it opens from a phone. It runs over the internet. The same Wi-Fi is not required.</p>
+                        </div>
+                    </div>
+                    <div class="mini-links">
+                        <a href="https://masa-siparis-paneli.vercel.app" target="_blank" rel="noopener noreferrer"><span class="tr">Canlı</span><span class="en">Live</span></a>
+                    </div>
+                </article>
+                <article data-cat="web">
+                    <div>
+                        <h3>Denetimy</h3>
+                        <div class="tr">
+                            <p>Franchise şubelerini merkezden denetlemek için kurduğum yer. Merkez denetim formunu yazıyor: evet hayır, puan, yazı ve fotoğraf. Formu şubeye atıyor.</p>
+                            <p>Şube telefondan dolduruyor. Merkez skoru, geciken denetimi ve şubeden gelen arıza talebini aynı ekranda görüyor. Kimin nereyi göreceği role bağlı.</p>
+                        </div>
+                        <div class="en">
+                            <p>A place I built so franchise branches could be audited from the centre. Headquarters writes the audit form: yes or no, a score, text and a photo. Then it assigns the form to a branch.</p>
+                            <p>The branch fills it from a phone. Headquarters sees the score, the overdue audit and the fault ticket from the branch on one screen. Who sees what depends on the role.</p>
+                        </div>
+                    </div>
+                </article>
+                <article data-cat="ai">
+                    <div>
+                        <h3><span class="tr">İşaret dili</span><span class="en">Sign language</span></h3>
+                        <div class="tr">
+                            <p>Kameranın önündeki eli okuyan bir görüntü işi. Model, harfi gri ve küçük bir kareye indirip tanıyor. A’dan Z’ye kadar işaret, eşiği geçince ekrana yazılıyor.</p>
+                            <p>Elin kadrajda durması yetiyor. Konuşmadan bir harf bırakmak için kurdum.</p>
+                        </div>
+                        <div class="en">
+                            <p>An image project that reads the hand in front of the camera. The model shrinks the letter into a small grey square and recognises it. Signs from A to Z are written on the screen once they pass the threshold.</p>
+                            <p>The hand only has to stay in the frame. I built it so a letter could be left without speaking.</p>
+                        </div>
+                    </div>
+                </article>
+                <article data-cat="ai">
+                    <div>
+                        <h3>MedDil</h3>
+                        <div class="tr">
+                            <p>Şikayetini anlatıyorsun. MedDil, öğrendiği bilgilerle seni o hastanenin ilgili bölümüne bırakıyor. Neren ağrıyor, neyin var; cümle doğru kapıya gidiyor.</p>
+                            <p>İnsan tıp teriminin içinde kaybolmasın diye kurdum. Yön tarif, teşhis değil.</p>
+                        </div>
+                        <div class="en">
+                            <p>You describe what is wrong. MedDil uses what it has learned and leaves you at the right department of that hospital. Where it hurts, what you have: the sentence goes to the right door.</p>
+                            <p>I built it so a person would not get lost inside a medical term. It is a direction, not a diagnosis.</p>
+                        </div>
+                    </div>
+                </article>
+                <article data-cat="ai">
+                    <div>
+                        <h3><span class="tr">Kan hücresi sayımı</span><span class="en">Blood cell count</span></h3>
+                        <div class="tr">
+                            <p>Kan yaymasının fotoğrafını alıp alyuvarı, akyuvarı ve trombositi ayrı ayrı sayan bir model eğittim. Kutu hücrenin üstüne oturuyor, sayaç yanda birikiyor.</p>
+                            <p>Fotoğrafı sayfaya bırakıyorsun. Model bakıyor, işaretliyor, sayıyor. Gözün tek tek saymakta yorulduğu yeri ekrana verdim.</p>
+                        </div>
+                        <div class="en">
+                            <p>I trained a model that takes a photo of a blood smear and counts red cells, white cells and platelets separately. A box sits on the cell, and the counter adds up beside it.</p>
+                            <p>You leave the photo on the page. The model looks, marks and counts. I gave the screen the job that tires the eye when it counts one by one.</p>
+                        </div>
+                    </div>
+                </article>
+                <article data-cat="web">
+                    <div>
+                        <h3>AfetLink</h3>
+                        <div class="tr">
+                            <p>Acil durumda kimin neye ihtiyacı varsa, ona uygun yardımı buluşturan bir yer. Gıda, ilaç, giyim, barınma ayrı duruyor. İstek haritada ve listede görünüyor. Yardım etmek isteyen de aynı kapıdan giriyor.</p>
+                            <p>Türkçe, İngilizce ve Arapça. Arama, bildirim ve sayı da orada. Genel bir “yardım edin” bağırışı değil; ihtiyacın kendisi adresi oluyor.</p>
+                        </div>
+                        <div class="en">
+                            <p>A place that matches help to whatever a person needs in an emergency. Food, medicine, clothing and shelter stay separate. The request shows on the map and in the list. Someone who wants to help comes through the same door.</p>
+                            <p>Turkish, English and Arabic. Search, notifications and the numbers are there too. It is not a general shout of “please help”. The need itself becomes the address.</p>
+                        </div>
+                    </div>
+                </article>
+                <article data-cat="web">
+                    <div>
+                        <h3><span class="tr">Akdeniz Muhasebe</span><span class="en">Akdeniz Accounting</span></h3>
+                        <div class="tr">
+                            <p>Patronun borcunu, alacağını, kasasını ve stoğunu tek yerden gördüğü iş paneli. Mali müşavir programı değil. Alım fişi stoğu ve tedarikçi borcunu birlikte oynatıyor. Satış fişi stoğu ve kasayı, ya da alacağı, birlikte oynatıyor.</p>
+                            <p>Windows’ta masanın üstünde duruyor, telefona da iniyor. Yedek alınıyor, Excel’e dökülebiliyor. Servis Pusulası’na açılan bir kapı da bıraktım.</p>
+                        </div>
+                        <div class="en">
+                            <p>A work panel where the owner sees debt, receivables, the till and the stock in one place. It is not an accountant’s suite. A purchase slip moves stock and the supplier’s debt together. A sale slip moves stock and the till, or the receivable, together.</p>
+                            <p>It sits on the Windows desk and also comes down to the phone. Backups can be taken, and it can be poured into Excel. I also left a door toward Servis Pusulası.</p>
+                        </div>
+                    </div>
+                </article>
+                <article data-cat="ai">
+                    <div>
+                        <h3>Sor AI</h3>
+                        <div class="tr">
+                            <p>PDF’yi bırakıyorsun. Sor AI metnin içinden soru çıkarıyor ve sana geri veriyor. Seçenekli sorular metindeki bilgiye yaslanıyor. İstersen sorular yeniden bir belgeye de dökülüyor.</p>
+                            <p>Uzun bir dosyayı okuyup “buradan ne sorulur” diye düşünen tarafı ben kurdum. Çalışan da sorabiliyor, dosya da konuşabiliyor.</p>
+                        </div>
+                        <div class="en">
+                            <p>You leave a PDF. Sor AI pulls questions out of the text and hands them back. The multiple-choice questions lean on what the document actually says. If you want, the questions are poured into a document again.</p>
+                            <p>I built the side that reads a long file and asks what could be questioned from it. A person can ask, and the file can answer.</p>
+                        </div>
+                    </div>
+                </article>
+                <article data-cat="web">
+                    <div>
+                        <h3><span class="tr">Galatasaray fan sayfası</span><span class="en">Galatasaray fan page</span></h3>
+                        <div class="tr">
+                            <p>Kulübün tarihçesi, kadrosu, kupaları, galerisi ve haberleri tek sayfada. Taraftarın kaydırırken kulübü baştan sona gezmesi için kurdum.</p>
+                            <p>Sakin bir kart değil. Sayfa hareket ediyor, kadro ve kupa aynı nefeste duruyor.</p>
+                        </div>
+                        <div class="en">
+                            <p>The club’s history, squad, trophies, gallery and news on one page. I built it so a supporter could walk the club from start to finish while scrolling.</p>
+                            <p>It is not a quiet card. The page moves, and the squad and the trophies share the same breath.</p>
+                        </div>
+                    </div>
+                </article>
+                <article data-cat="web">
+                    <div>
+                        <h3>WikiRota</h3>
+                        <div class="tr">
+                            <p>Türkçe Vikipedi’de bir maddeden diğerine yarışıyorsun. Yolun kendisi skor oluyor.</p>
+                            <p>Bilgi biraz oyun olsun diye kurdum. Doğru bağlantıyı bulan, maddeyi de okumuş oluyor.</p>
+                        </div>
+                        <div class="en">
+                            <p>You race from one Turkish Wikipedia article to the next. The path itself becomes the score.</p>
+                            <p>I built it so knowledge could feel like a game. Whoever finds the right link has also read the article.</p>
+                        </div>
+                    </div>
+                    <div class="mini-links">
+                        <a href="https://wikirota.vercel.app" target="_blank" rel="noopener noreferrer"><span class="tr">Canlı</span><span class="en">Live</span></a>
+                        <a href="https://github.com/kemalalperakdnz/WikiRota" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </div>
+                </article>
+                <article data-cat="ai">
+                    <div>
+                        <h3><span class="tr">Zatürre teşhisi</span><span class="en">Pneumonia detection</span></h3>
+                        <div class="tr">
+                            <p>Göğüs röntgenine bakıp zatürreyi ayırt etsin diye bir model eğittim. Sıfırdan değil; daha önce öğrenmiş bir modeli devralıp bu işe çevirdim.</p>
+                            <p>Film geliyor, model bakıyor, zatürre var mı diye cevap veriyor.</p>
+                        </div>
+                        <div class="en">
+                            <p>I trained a model to tell pneumonia from a chest X-ray. Not from nothing: I took a model that had already learned and turned it to this job.</p>
+                            <p>The film arrives, the model looks, and it answers whether pneumonia is there.</p>
+                        </div>
+                    </div>
+                    <div class="mini-links">
+                        <a href="https://github.com/kemalalperakdnz/CNN-Zaturre-Teshis-Sistemi" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </div>
+                </article>
+                <article data-cat="ai ders">
+                    <div>
+                        <h3><span class="tr">Bakım aciliyet rehberi</span><span class="en">Maintenance urgency guide</span></h3>
+                        <div class="tr">
+                            <p>Bir bakım ne kadar aceledir, bulanık mantıkla söyleyen bir rehber. Aşınma ve kullanım süresi katı bir çizgiye vurulmuyor; insan gibi, bir arada tartılıyor.</p>
+                            <p>Sonuç bir skor. Usta “bu bugün mü, haftaya mı” diye bakabilsin diye kurdum.</p>
+                        </div>
+                        <div class="en">
+                            <p>A guide that says how urgent a repair is, using fuzzy logic. Wear and hours of use are not forced onto a hard line. They are weighed together, the way a person would.</p>
+                            <p>The result is a score. I built it so a mechanic could see whether this is today or next week.</p>
+                        </div>
+                    </div>
+                    <div class="mini-links">
+                        <a href="https://github.com/kemalalperakdnz/bakim_aciliyet_rehberi" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </div>
+                </article>
+                <article data-cat="urun">
+                    <div>
+                        <h3><span class="tr">E-Bakım Defteri</span><span class="en">E-maintenance log</span></h3>
+                        <p class="tr">Araçların bakımını defterden çıkarıp ekrana aldım.</p>
+                        <p class="en">I took vehicle maintenance off the paper log and put it on a screen.</p>
+                    </div>
+                </article>
+                <article data-cat="ai">
+                    <div>
+                        <h3><span class="tr">Parola analizi</span><span class="en">Password analysis</span></h3>
+                        <p class="tr">Bir parolanın ne kadar sağlam durduğunu söyleyen küçük bir araç.</p>
+                        <p class="en">A small tool that tells you how strong a password really is.</p>
+                    </div>
+                </article>
+                <article data-cat="iot">
+                    <div>
+                        <h3>Taqkey · <span class="tr">Akıllı tabanlık</span><span class="en">Smart insole</span></h3>
+                        <p class="tr">NFC ile bilgi taşıyan bir anahtarlık ve yolunu hatırlayan bir tabanlık yaptım.</p>
+                        <p class="en">I made a key fob that carries a note by NFC, and an insole that remembers the path.</p>
+                    </div>
+                </article>
+                <article data-cat="web">
+                    <div>
+                        <h3><span class="tr">İnsan hakları</span><span class="en">Human rights</span></h3>
+                        <p class="tr">Hakları günlük dile indiren bir site. Okuyan insan sıkılmadan kalsın istedim.</p>
+                        <p class="en">A site that puts rights into everyday language. I wanted people to stay with it.</p>
+                    </div>
+                    <div class="mini-links">
+                        <a href="https://goldbees-insanhaklar.vercel.app/" target="_blank" rel="noopener noreferrer"><span class="tr">Canlı</span><span class="en">Live</span></a>
+                        <a href="https://github.com/kemalalperakdnz/goldbees_insanhaklar" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </div>
+                </article>
+                <article data-cat="web">
+                    <div>
+                        <h3>e-Orman</h3>
+                        <p class="tr">Bir ağaç dikimine ekrandan katılmak için kurduğumuz yer. Doğa da orada anlatılıyor.</p>
+                        <p class="en">A place we built so you could join a real tree planting from the screen. Nature is taught there too.</p>
+                    </div>
+                    <div class="mini-links">
+                        <a href="https://github.com/kemalalperakdnz/e-orman" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </div>
+                </article>
+                <article data-cat="web urun">
+                    <div>
+                        <h3><span class="tr">Alacak-verecek</span><span class="en">Receivables</span></h3>
+                        <p class="tr">Esnafın “kim ne kadar borçlu” sorusunu tek listede tuttum.</p>
+                        <p class="en">I kept a small shop’s “who owes what” in one list.</p>
+                    </div>
+                    <div class="mini-links">
+                        <a href="https://github.com/kemalalperakdnz/alacak-verecek_isletme_uygulamasi" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </div>
+                </article>
+                <article data-cat="web">
+                    <div>
+                        <h3><span class="tr">MEÜ Bilişim Topluluğu</span><span class="en">MEU Informatics Club</span></h3>
+                        <p class="tr">Mersin’deki bilişim topluluğunun etkinliğini ve insanını anlatan site.</p>
+                        <p class="en">A site for the informatics club in Mersin: their events and their people.</p>
+                    </div>
+                    <div class="mini-links">
+                        <a href="https://github.com/kemalalperakdnz/meubilisimtoplulugu" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </div>
+                </article>
+                <article data-cat="web">
+                    <div>
+                        <h3><span class="tr">İngilizce pratik</span><span class="en">English practice</span></h3>
+                        <p class="tr">Kelime çalışırken sıkılmayayım diye kurduğum pratik.</p>
+                        <p class="en">A practice I built so studying words would not feel like a chore.</p>
+                    </div>
+                    <div class="mini-links">
+                        <a href="https://ingilizce-pratik.vercel.app" target="_blank" rel="noopener noreferrer"><span class="tr">Canlı</span><span class="en">Live</span></a>
+                        <a href="https://github.com/kemalalperakdnz/ingilizce_pratik" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </div>
+                </article>
+                <article data-cat="web">
+                    <div>
+                        <h3><span class="tr">Küçük oyunlar</span><span class="en">Small games</span></h3>
+                        <p class="tr">Boş bir akşamda tarayıcıya sığdırdığım kısa oyunlar.</p>
+                        <p class="en">Short games I fit into the browser on a quiet evening.</p>
+                    </div>
+                    <div class="mini-links">
+                        <a href="https://github.com/kemalalperakdnz/small_games" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </div>
+                </article>
+                <article data-cat="ai ders">
+                    <div>
+                        <h3><span class="tr">Radyoloji simülasyonu</span><span class="en">Radiology simulation</span></h3>
+                        <p class="tr">Radyolojiyi ekranda gezilebilir hale getirmek için kurduğum simülasyon.</p>
+                        <p class="en">A simulation I built so radiology could be walked through on a screen.</p>
+                    </div>
+                    <div class="mini-links">
+                        <a href="https://github.com/kemalalperakdnz/Radyoloji_Sim" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </div>
+                </article>
+                <article data-cat="ai ders">
+                    <div>
+                        <h3><span class="tr">Histogram</span><span class="en">Histogram</span></h3>
+                        <p class="tr">Bir fotoğrafın ışığını eşitleyip gerdirerek yan yana koydum.</p>
+                        <p class="en">I equalized a photograph’s light, stretched it, and set the two side by side.</p>
+                    </div>
+                    <div class="mini-links">
+                        <a href="https://github.com/kemalalperakdnz/Histogram-Equalization-and-Histogram-Stretching" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </div>
+                </article>
+                <article data-cat="ai ders">
+                    <div>
+                        <h3>ALS · Alzheimer</h3>
+                        <p class="tr">İki ayrı model. Biri ALS, biri Alzheimer için baktı.</p>
+                        <p class="en">Two models. One looked for ALS, the other for Alzheimer.</p>
+                    </div>
+                    <div class="mini-links">
+                        <a href="https://github.com/kemalalperakdnz/python_regresion_ALS_disease" target="_blank" rel="noopener noreferrer">ALS</a>
+                        <a href="https://github.com/kemalalperakdnz/python_classification_Alzheimer_disease" target="_blank" rel="noopener noreferrer">Alzheimer</a>
+                    </div>
+                </article>
+                <article data-cat="web ders">
+                    <div>
+                        <h3>Blockchain</h3>
+                        <p class="tr">Blockchain’i ilk kez duyan birine anlatır gibi yazdım.</p>
+                        <p class="en">I wrote blockchain the way I would tell it to someone hearing it for the first time.</p>
+                    </div>
+                    <div class="mini-links">
+                        <a href="https://github.com/kemalalperakdnz/Blockchain" target="_blank" rel="noopener noreferrer">GitHub</a>
+                    </div>
+                </article>
+                <article data-cat="web ders">
+                    <div>
+                        <h3><span class="tr">Öğrenme rehberleri</span><span class="en">Learning guides</span></h3>
+                        <p class="tr">Öğrenirken tuttuğum sayfalar. Git, GitHub, Bootstrap ve biyoinformatik.</p>
+                        <p class="en">Pages I kept while learning. Git, GitHub, Bootstrap and bioinformatics.</p>
+                    </div>
+                    <div class="mini-links">
+                        <a href="https://git-ogreticisi.vercel.app" target="_blank" rel="noopener noreferrer">Git</a>
+                        <a href="https://github-ogretici.vercel.app" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="https://bootstrap-ogretici.vercel.app" target="_blank" rel="noopener noreferrer">Bootstrap</a>
+                        <a href="https://biyoinformatik-rehber.vercel.app" target="_blank" rel="noopener noreferrer"><span class="tr">Biyo</span><span class="en">Bio</span></a>
+                    </div>
+                </article>
+            </div>
+            <p class="empty" id="empty" hidden>
+                <span class="tr">Bu başlıkta bir iş yok.</span>
+                <span class="en">Nothing under this heading.</span>
+            </p>
+        </section>
+
+        <section class="section" id="belgeler">
+            <div class="section-head">
+                <p class="index">05</p>
+                <div>
+                    <h2><span class="tr">Belgeler</span><span class="en">Credentials</span></h2>
+                    <p class="file">src/belgeler.json</p>
+                </div>
+            </div>
+            <ul class="creds">
+                <li><span class="tr">İHA-1 · İnsansız hava aracı · 2026</span><span class="en">IHA-1 · Unmanned aircraft · 2026</span></li>
+                <li><a href="https://coderspace.io/acaff1e0-21e4-4219-9dc7-7bb2fd5e0466" target="_blank" rel="noopener noreferrer">Coderspace · Front-End Okulu · 2024</a></li>
+                <li><a href="https://verified.sertifier.com/tr/verify/14924888977326/" target="_blank" rel="noopener noreferrer">Kodluyoruz · Hi-Kod Front-End · 2025</a></li>
+                <li><a href="https://verified.sertifier.com/en/verify/40546928891426/" target="_blank" rel="noopener noreferrer"><span class="tr">Kodluyoruz · Yapay zeka · 2025</span><span class="en">Kodluyoruz · Artificial intelligence · 2025</span></a></li>
+                <li><a href="https://www.credly.com/badges/a7bd2620-015a-4009-93df-ba75951ca342" target="_blank" rel="noopener noreferrer">Cisco · Introduction to Cybersecurity · 2023</a></li>
+                <li><a href="https://www.btkakademi.gov.tr/portal/certificate/validate?certificateId=Ko9fLKwm4A" target="_blank" rel="noopener noreferrer">BTK Akademi · HTML5 · 2023</a></li>
+                <li><a href="https://www.btkakademi.gov.tr/portal/certificate/validate?certificateId=nKqhojDZxK" target="_blank" rel="noopener noreferrer">BTK Akademi · CSS · 2023</a></li>
+                <li><a href="https://www.btkakademi.gov.tr/portal/certificate/validate?certificateId=BozfGOwqYb" target="_blank" rel="noopener noreferrer"><span class="tr">BTK Akademi · Web kullanılabilirliği · 2023</span><span class="en">BTK Akademi · Web usability · 2023</span></a></li>
+                <li><a href="https://www.btkakademi.gov.tr/portal/certificate/validate?certificateId=XV1hW9bDn6" target="_blank" rel="noopener noreferrer"><span class="tr">BTK Akademi · İşletim sistemleri · 2022</span><span class="en">BTK Akademi · Operating systems · 2022</span></a></li>
+                <li><a href="https://www.btkakademi.gov.tr/portal/certificate/validate?certificateId=L8dcnMMZW9" target="_blank" rel="noopener noreferrer"><span class="tr">BTK Akademi · Proje yönetimi · 2023</span><span class="en">BTK Akademi · Project management · 2023</span></a></li>
+                <li><a href="https://www.btkakademi.gov.tr/portal/certificate/validate?certificateId=wmlFJ0bjaA" target="_blank" rel="noopener noreferrer"><span class="tr">BTK Akademi · Etkili iletişim · 2023</span><span class="en">BTK Akademi · Effective communication · 2023</span></a></li>
+                <li><a href="https://ude.my/UC-62016fc2-774f-4141-bfd1-42a7991afbbd" target="_blank" rel="noopener noreferrer">Udemy · C# · 2024</a></li>
+                <li><a href="https://drdogrulama.sanayi.gov.tr/tr/verify/34029120639709" target="_blank" rel="noopener noreferrer"><span class="tr">TEKNOFEST 2024 · Akıllı ulaşım</span><span class="en">TEKNOFEST 2024 · Smart transportation</span></a></li>
+                <li><a href="https://drdogrulama.sanayi.gov.tr/tr/verify/06408455470563" target="_blank" rel="noopener noreferrer"><span class="tr">TEKNOFEST 2024 · İnsanlık yararına</span><span class="en">TEKNOFEST 2024 · For humanity</span></a></li>
+                <li><a href="https://drdogrulama.sanayi.gov.tr/tr/verify/73576740899247" target="_blank" rel="noopener noreferrer"><span class="tr">TEKNOFEST 2024 · Tarım teknolojileri</span><span class="en">TEKNOFEST 2024 · Agricultural technologies</span></a></li>
+                <li><a href="https://drdogrulama.sanayi.gov.tr/tr/verify/92051403446583" target="_blank" rel="noopener noreferrer"><span class="tr">TEKNOFEST 2023 · İnsanlık yararına</span><span class="en">TEKNOFEST 2023 · For humanity</span></a></li>
+                <li><span class="tr">KOSGEB · Geleneksel ve ileri girişimcilik</span><span class="en">KOSGEB · Entrepreneurship</span></li>
+                <li><span class="tr">Mersin Üniversitesi · Proje yönetimi ve iş sağlığı</span><span class="en">Mersin University · Project management and occupational safety</span></li>
+                <li><span class="tr">Anadolu Üniversitesi · Web tabanlı kodlama</span><span class="en">Anadolu University · Web-based coding</span></li>
+            </ul>
+        </section>
+
+        <section class="section contact" id="iletisim">
+            <div class="section-head">
+                <p class="index">06</p>
+                <div>
+                    <h2><span class="tr">Yazın</span><span class="en">Write</span></h2>
+                    <p class="file">src/iletisim.tsx</p>
+                    <p class="section-note">
+                        <span class="tr">Bir iş, bir fikir ya da sadece merhaba.</span>
+                        <span class="en">A job, an idea, or just hello.</span>
+                    </p>
+                </div>
+            </div>
+            <div class="contact-grid">
+                <div>
+                    <a class="big-mail" href="mailto:alperkemalakdeniz@gmail.com">alperkemalakdeniz@gmail.com</a>
+                    <ul class="contact-list">
+                        <li><a href="tel:+905459667230">+90 545 966 72 30</a></li>
+                        <li><span class="tr">Kayseri, Türkiye</span><span class="en">Kayseri, Turkey</span></li>
+                    </ul>
+                    <div class="socials">
+                        <a href="https://github.com/kemalalperakdnz" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <a href="https://www.linkedin.com/in/kemal-alper-akdeniz-00955718b/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+                        <a href="https://medium.com/@kemalalperakdeniz" target="_blank" rel="noopener noreferrer">Medium</a>
+                        <a href="https://www.instagram.com/k.alperakdeniz/" target="_blank" rel="noopener noreferrer">Instagram</a>
+                        <a href="https://akdeniztech.com" target="_blank" rel="noopener noreferrer">Akdeniz Technology</a>
+                    </div>
+                </div>
+                <form id="contactForm" action="mailto:alperkemalakdeniz@gmail.com" method="post" enctype="text/plain">
+                    <label>
+                        <span class="tr">İsim</span><span class="en">Name</span>
+                        <input name="name" type="text" required autocomplete="name" maxlength="80">
+                    </label>
+                    <label>
+                        <span class="tr">E-posta</span><span class="en">Email</span>
+                        <input name="email" type="email" required autocomplete="email" maxlength="120">
+                    </label>
+                    <label>
+                        <span class="tr">Konu</span><span class="en">Subject</span>
+                        <input name="subject" type="text" required maxlength="140">
+                    </label>
+                    <label>
+                        <span class="tr">Mesaj</span><span class="en">Message</span>
+                        <textarea name="message" required rows="5" maxlength="2000"></textarea>
+                    </label>
+                    <button class="btn fill" type="submit"><span class="tr">Mail gönder</span><span class="en">Send mail</span></button>
+                    <p class="form-note" id="formNote" hidden>
+                        <span class="tr">Mail uygulaman açıldı. Alıcı: alperkemalakdeniz@gmail.com</span>
+                        <span class="en">Your mail app is open. To: alperkemalakdeniz@gmail.com</span>
+                    </p>
+                    <a class="mail-direct" href="mailto:alperkemalakdeniz@gmail.com"><span class="tr">Doğrudan yaz: alperkemalakdeniz@gmail.com</span><span class="en">Write directly: alperkemalakdeniz@gmail.com</span></a>
+                </form>
+            </div>
+        </section>
+    </main>
+
+    <div class="statusbar" aria-hidden="true">
+        <span><i class="gear"></i> <span class="tr">derleniyor</span><span class="en">building</span></span>
+        <span class="ok">main</span>
+        <span id="sbPos">Ln 1, Col 1</span>
+        <span class="hide-sm">UTF-8</span>
+        <span class="hide-sm">TypeScript</span>
+        <span>Kayseri</span>
+        <span class="push">Akdeniz Technology</span>
+    </div>
+    <footer class="footer">
+        <p>© <span id="year">2026</span> Kemal Alper Akdeniz</p>
+        <a href="images/Kemal-Alper-Akdeniz-CV.pdf" download><span class="tr">CV · PDF</span><span class="en">CV · PDF</span></a>
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>

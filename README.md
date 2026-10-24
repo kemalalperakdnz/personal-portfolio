@@ -1,23 +1,9 @@
-# personal_blog_page
-🌍 Kemal Alper Akdeniz Kişisel Web Sitesi
-Bu proje, HTML, CSS, Bootstrap ve JavaScript kullanılarak oluşturulmuş kişisel bir web sitesidir. Site, kullanıcı dostu bir arayüz ve modern tasarım öğeleriyle kendimi ve çalışmalarımı tanıtmak amacıyla geliştirilmiştir.
+# Personal Portfolio
 
-Kullanılan Teknolojiler:
+Personal portfolio of Kemal Alper Akdeniz. Static site: HTML, CSS, and JavaScript. No build step.
 
-HTML: Temel yapı ve içerik oluşturma.
+Open `index.html` in a browser, or serve the folder:
 
-CSS: Stil ve tasarım öğeleri.
-
-Bootstrap: Responsive (duyarlı) tasarım ve hızlı geliştirme.
-
-JavaScript: Dinamik etkileşimler ve işlevsellik.
-
-Özellikler:
-
-Responsive tasarım (tüm cihazlarda uyumlu).
-
-Temiz ve modern kullanıcı arayüzü.
-
-Kolayca güncellenebilir yapı.
-
-Proje açık kaynaklıdır, incelemek veya katkıda bulunmak için çekinmeyin!
+```bash
+python -m http.server 8765
+```
