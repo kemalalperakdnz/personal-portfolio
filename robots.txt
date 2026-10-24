@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://personal-portfolio-nine-dun.vercel.app/sitemap.xml
+Sitemap: https://kemalalperakdeniz.dev/sitemap.xml
